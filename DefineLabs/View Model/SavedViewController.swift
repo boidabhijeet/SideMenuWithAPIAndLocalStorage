@@ -57,9 +57,9 @@ extension SavedViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = savedItems[indexPath.row]
-//        cell.venueSelected.tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+//        let cell = self.savedTableView.cellForRow(at: indexPath) as! SavedTableViewCell
+//        cell.isSaved.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         deleteItem(item: item)
-        
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

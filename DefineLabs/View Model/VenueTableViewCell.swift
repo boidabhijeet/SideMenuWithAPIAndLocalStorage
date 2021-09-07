@@ -10,9 +10,7 @@ import UIKit
 class VenueTableViewCell: UITableViewCell {
 
     @IBOutlet weak var venueSelected: UIImageView!
-    
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var subTitle: UILabel!
     
     override func awakeFromNib() {
