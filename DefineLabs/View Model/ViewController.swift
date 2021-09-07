@@ -78,22 +78,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = dataModel?[indexPath.row].name
-        cell?.detailTextLabel?.text = "\(dataModel?[indexPath.row].location?.city ?? ""), \(dataModel?[indexPath.row].location?.state ?? ""), \(dataModel?[indexPath.row].location?.country ?? "")"
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! VenueTableViewCell
+        cell.title?.text = dataModel?[indexPath.row].name
+        cell.subTitle?.text = "\(dataModel?[indexPath.row].location?.city ?? ""), \(dataModel?[indexPath.row].location?.state ?? ""), \(dataModel?[indexPath.row].location?.country ?? "")"
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataModel?[indexPath.row]
         createItem(name: (item?.name)!, city: (item?.location?.city)!, state: (item?.location?.state)!, country: (item?.location?.country)!)
+//        cell.venueSelected.tintColor = #colorLiteral(red: 1, green: 0.8352941176, blue: 0.2666666667, alpha: 1)
+        // Golden Color: FFD544
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
+    }
+    
+//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        return indexPath
+//    }
+    
 }
 
 class MenuListController: UITableViewController {
     let menuItems = ["Venues", "Saved Venues"]
     let darkColor = UIColor(red: 33/250.0, green: 33/250.0, blue: 33/250.0, alpha: 1)
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,11 +124,12 @@ class MenuListController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if menuItems[indexPath.row] == "Venues" {
-            let vc = storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+            let vc = storyboard.instantiateViewController(identifier: "ViewController") as! ViewController
             navigationController?.pushViewController(vc, animated: true)
         } else {
-            let vc = storyboard?.instantiateViewController(identifier: "SavedViewController") as! SavedViewController
+            let vc = storyboard.instantiateViewController(identifier: "SavedViewController") as! SavedViewController
             navigationController?.pushViewController(vc, animated: true)
         }
     }

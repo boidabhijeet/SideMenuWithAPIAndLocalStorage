@@ -18,7 +18,8 @@
 		04F32C2926E6351900C207D3 /* Venues+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F32C2726E6351900C207D3 /* Venues+CoreDataProperties copy.swift */; };
 		04F32C2A26E6351900C207D3 /* Venues+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F32C2826E6351900C207D3 /* Venues+CoreDataClass copy.swift */; };
 		04F32C2C26E636ED00C207D3 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F32C2B26E636ED00C207D3 /* SavedViewController.swift */; };
-		04FC7B5926E6527E00FE2977 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC7B5826E6527E00FE2977 /* MenuBarViewController.swift */; };
+		04FC7B5B26E73F1C00FE2977 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC7B5A26E73F1C00FE2977 /* VenueTableViewCell.swift */; };
+		04FC7B5D26E73F3800FE2977 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC7B5C26E73F3800FE2977 /* SavedTableViewCell.swift */; };
 		7E481114BF418DC8E48F2989 /* Pods_DefineLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF779703BD4D65DC8A5FA80 /* Pods_DefineLabs.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,8 @@
 		04F32C2726E6351900C207D3 /* Venues+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Venues+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		04F32C2826E6351900C207D3 /* Venues+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Venues+CoreDataClass copy.swift"; sourceTree = "<group>"; };
 		04F32C2B26E636ED00C207D3 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
-		04FC7B5826E6527E00FE2977 /* MenuBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
+		04FC7B5A26E73F1C00FE2977 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
+		04FC7B5C26E73F3800FE2977 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		4C9D504E7CA9BD3EB37949F3 /* Pods-DefineLabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefineLabs.debug.xcconfig"; path = "Target Support Files/Pods-DefineLabs/Pods-DefineLabs.debug.xcconfig"; sourceTree = "<group>"; };
 		67BB1666467E506B73593D5C /* Pods-DefineLabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefineLabs.release.xcconfig"; path = "Target Support Files/Pods-DefineLabs/Pods-DefineLabs.release.xcconfig"; sourceTree = "<group>"; };
 		9DF779703BD4D65DC8A5FA80 /* Pods_DefineLabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefineLabs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +127,8 @@
 		04B44FB526E3B53200C088E1 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				04FC7B5826E6527E00FE2977 /* MenuBarViewController.swift */,
+				04FC7B5A26E73F1C00FE2977 /* VenueTableViewCell.swift */,
+				04FC7B5C26E73F3800FE2977 /* SavedTableViewCell.swift */,
 				04B44F9C26E3B3A000C088E1 /* ViewController.swift */,
 				04F32C2B26E636ED00C207D3 /* SavedViewController.swift */,
 			);
@@ -266,9 +269,10 @@
 				04B44FB026E3B3C900C088E1 /* DataModel.swift in Sources */,
 				04F32C2926E6351900C207D3 /* Venues+CoreDataProperties copy.swift in Sources */,
 				04B44FA326E3B3A000C088E1 /* DefineLabs.xcdatamodeld in Sources */,
+				04FC7B5B26E73F1C00FE2977 /* VenueTableViewCell.swift in Sources */,
 				04B44F9D26E3B3A000C088E1 /* ViewController.swift in Sources */,
+				04FC7B5D26E73F3800FE2977 /* SavedTableViewCell.swift in Sources */,
 				04B44F9926E3B3A000C088E1 /* AppDelegate.swift in Sources */,
-				04FC7B5926E6527E00FE2977 /* MenuBarViewController.swift in Sources */,
 				04F32C2A26E6351900C207D3 /* Venues+CoreDataClass copy.swift in Sources */,
 				04F32C2C26E636ED00C207D3 /* SavedViewController.swift in Sources */,
 				04B44F9B26E3B3A000C088E1 /* SceneDelegate.swift in Sources */,

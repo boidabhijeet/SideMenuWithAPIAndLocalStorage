@@ -48,15 +48,21 @@ extension SavedViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "savedCell")
-        cell?.textLabel?.text = savedItems[indexPath.row].name
-        cell?.detailTextLabel?.text =
+        let cell = tableView.dequeueReusableCell(withIdentifier: "savedCell") as! SavedTableViewCell
+        cell.title?.text = savedItems[indexPath.row].name
+        cell.subTitle?.text =
             "\(savedItems[indexPath.row].city ?? ""), \(savedItems[indexPath.row].state ?? ""), \(savedItems[indexPath.row].country ?? "")"
-        return cell!
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = savedItems[indexPath.row]
+//        cell.venueSelected.tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         deleteItem(item: item)
+        
+    }
+   
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
     }
 }
